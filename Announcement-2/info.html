@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Information</title>
+	<!-- extental font style -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	<style type="text/css">
+	html{
+			margin: -18px -10px 0px -10px;
+		}
+
+	/*pop up modal for purchase attempts */
+		.modalDialog {
+	position: fixed;
+	font-family: 'Open Sans', sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	color: black;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+}
+
+		html{
+			margin: -18px -10px 0px -10px;
+		}
+		.logo{
+			float: left;
+			margin-left: 20px;
+			padding-top: 3px;
+		}
+	
+		.nav-main{
+			background-color: rgba(0,0,0,.7);
+			width: 100%;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: lighter;
+			text-align: center;
+
+			}
+		ul{
+			list-style-type: none;
+
+		}
+		li{
+			text-align: center;
+
+		}
+		.nav{ 
+
+			display: inline-block;
+			padding: 4px 30px 4px 30px;
+
+		}
+
+		a{
+			text-decoration: none;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 11pt;
+			display: block;
+
+		}
+		a:hover{
+			color: black;
+		}
+		.nav-item{
+			background-color: rgba(0,0,0,.0);
+			padding: 12px;
+			transition: 1s;
+			
+		
+		}
+		.nav-item:hover{
+			
+			padding: 12px;
+			transition: .5s;
+			color: black;
+		}
+		.nav-item:focus{
+			background-color: rgba(0,0,0,.7);
+		}
+		.nav-item:focus ~ .nav-content {
+			max-height: 400px;
+			transition:max-height 1s ease-in;
+		}
+
+		.nav-content{
+			position: absolute;
+			top:36px;
+			overflow: hidden;
+			background-color: rgba(0,0,0,.7);
+			text-decoration: none;
+			max-height: 0px;
+		}
+		.navsub{
+			padding: 10px 5px 10px 0px;
+
+		}
+		.navsub:hover{
+			
+		}
+		.nav-content:hover{
+			
+			text-decoration: none;
+			color: black;
+		}
+
+	table{
+		
+		width: 100%;
+		height: 800px;
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		align-content: center;
+	}
+	td{
+		
+		font-size: 20pt;
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		align-content: center;
+	}
+	th{
+		font-size: 40pt;
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		align-content: center;
+	}
+
+
+
+		
+
+
+
+	</style>
+
+	
+</head>
+<body>
+
+	<nav class="nav-main">
+		<div class="logo"><a href="index.html"><img src="orange_logo_small.png"></a></div>
+		
+		<ul>
+			<li class="nav">
+				<a href="#" class="nav-item">Devices</a>
+				<div class="nav-content">
+					<div class="nav-sub">
+						<ul>
+							<li><a href="devices.html" class="navsub">Amazing Phone</a></li>
+							<li><a href="#" class="navsub">Amazing Phone PLus</a></li>
+							<li><a href="#" class="navsub">Awesome Phone</a></li>
+
+						</ul>
+
+					</div>
+
+				 </div>
+			</li>
+			<li class="nav">
+				<a href="info.html" class="nav-item">Info</a>
+			</li>
+			<li class="nav">
+				<a href="support.html" class="nav-item">Support</a>
+			</li class="nav">
+			<li class="nav">
+				<a href="search.html" class="nav-item">Search</a>
+			</li>
+		</ul>
+	</nav>
+	<br>
+
+	<table>
+		<tr>
+			<th id="gal" colspan="3"> Specs Comparison</th></id>
+		</tr>
+	<tr>
+
+		<td><img src="devices/coool.jpg"></td>
+		<td><img src="devices/plus.jpg"></td>
+		<td><img src="devices/x.jpg"></td>
+		
+	
+	</tr>
+	<tr>
+
+		<td>
+			<ul>
+				<!-- Device specs -->
+				<li>16gb, 960gb</li>
+				<li>Super Fast Processor</li>
+				<li>6.9" AMOLED 1080p</li>
+				<li>No headphone jack</li>
+			</ul>
+		</td>
+		<td>
+			<ul>
+				<li>960gb, 1778gb</li>
+				<li>Super Duper Fast Processor</li>
+				<li>8.9" AMOLED 2k</li>
+				<li>No headphone jack</li>
+			</ul>
+		</td>
+		<td>
+			<ul>
+
+				<li>16gb</li>
+				<li>A Processor</li>
+				<li>6" LCD 720p</li>
+				<li>headphone jack</li>
+			</ul>
+
+
+
+		</td>
+		
+	
+	</tr>
+
+	<tr><!-- 
+		device pricing -->
+		<td> $999 + tax</td>
+		<td>$1,499 + tax</td>
+		<td>$749 + tax</td>
+
+
+
+
+
+	</tr>
+
+	<tr>
+		<td><a href="#openModal"><img src="devices/price1.png"></a></td>
+		<div id="openModal" class="modalDialog">
+			<div>
+			<a href="#close" title="Close" class="close">X</a>
+		
+			
+			<p>Sorry! All sold out try again in 3 months.</p>
+		
+			</div>
+		</div>
+		<td><a href="#openModal"><img src="devices/price2.png"></a></td>
+		<div id="openModal" class="modalDialog">
+			<div>
+			<a href="#close" title="Close" class="close">X</a>
+		
+			
+			<p>Sorry! All sold out try again in 3 months.</p>
+		
+			</div>
+		</div>
+		<td><a href="#openModal"><img src="devices/price3.png"></a></td>
+		<div id="openModal" class="modalDialog">
+			<div>
+			<a href="#close" title="Close" class="close">X</a>
+		
+			
+			<p>Sorry! All sold out try again in 3 months.</p>
+		
+			</div>
+		</div>
+
+
+
+
+	</tr>
+
+	</table>
+
+</body>
+</html>

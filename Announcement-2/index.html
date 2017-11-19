@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazing Phone Co.</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+	<style type="text/css">
+
+
+	
+		html{
+			margin: -18px -10px 0px -10px;
+		}
+		
+		.logo{
+			float: left;
+			margin-left: 20px;
+			padding-top: 3px;
+		}
+	
+		.nav-main{
+			background-color: rgba(0,0,0,.7);
+			width: 100%;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: lighter;
+			text-align: center;
+
+			}
+		ul{
+			list-style-type: none;
+
+		}
+		li{
+			text-align: center;
+
+		}
+		.nav{ 
+
+			display: inline-block;
+			padding: 4px 30px 4px 30px;
+
+		}
+
+		a{
+			text-decoration: none;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 11pt;
+			display: block;
+
+		}
+		a:hover{
+			color: black;
+		}
+		.nav-item{
+			background-color: rgba(0,0,0,.0);
+			padding: 12px;
+			transition: 1s;
+			
+		
+		}
+		.nav-item:hover{
+			
+			padding: 12px;
+			transition: .5s;
+			color: black;
+		}
+		.nav-item:focus{
+			background-color: rgba(0,0,0,.7);
+		}
+		.nav-item:focus ~ .nav-content {
+			max-height: 400px;
+			transition:max-height 1s ease-in;
+		}
+
+		.nav-content{
+			position: absolute;
+			top:36px;
+			overflow: hidden;
+			background-color: rgba(0,0,0,.7);
+			text-decoration: none;
+			max-height: 0px;
+		}
+		.navsub{
+			padding: 10px 5px 10px 0px;
+
+		}
+		.navsub:hover{
+			
+		}
+		.nav-content:hover{
+			
+			text-decoration: none;
+			color: black;
+		}
+		.heroimg{
+			width: 100%;
+		}
+		.gallerybuttons{
+			display: flex;
+			justify-content: center;
+			padding: 10px 20px 10px 20px;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+
+<div id:navdiv>
+	<nav class="nav-main">
+		<div class="logo"><img src="orange_logo_small.png"></div>
+		
+		<ul>
+			<li class="nav">
+				<a href="#" class="nav-item">Devices</a>
+				<div class="nav-content">
+					<div class="nav-sub">
+						<ul>
+							<li><a href="info.html" class="navsub">Amazing Phone</a></li>
+							<li><a href="info.html" class="navsub">Amazing Phone PLus</a></li>
+							<li><a href="info.html" class="navsub">Awesome Phone</a></li>
+
+						</ul>
+
+					</div>
+
+				 </div>
+			</li>
+			<li class="nav">
+				<a href="info.html" class="nav-item">Info</a>
+			</li>
+			<li class="nav">
+				<a href="support.html" class="nav-item">Support</a>
+			</li class="nav">
+			<li class="nav">
+				<a href="search.html" class="nav-item">Search</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+	<br>
+<div class="slideshow">
+	<img class="heroimg" src="slideshow/hero1.png">
+	<img class="heroimg" src="slideshow/hero2.jpg">
+	<img class="heroimg" src="slideshow/hero3.jpg">
+	
+</div>
+<div class="gallerybuttons">
+<div><a class="back-button" onclick="plusDivs(-1)"><img src="slideshow/left.png"></a></div>
+	<div><a class="forward-button" onclick="plusDivs(+1)"><img src="slideshow/right.png"></a></div>
+</div>
+	
+
+	<script type="text/javascript">
+	var slideIndex = 0;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+		showDivs(slideIndex +=n );
+	}
+
+	function showDivs(n) {
+		var o;
+		var z = document.getElementsByClassName('heroimg')
+		if (n > z.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = z.length}
+		for (o = 0; o < z.length; o++) {
+				z[o].style.display = "none"
+		}
+		z[slideIndex-1].style.display = "block"
+
+	}
+
+
+</script>
+
+</body>
+</html>
